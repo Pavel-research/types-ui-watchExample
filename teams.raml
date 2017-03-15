@@ -1,0 +1,15 @@
+#%RAML 1.0
+title: teams
+types:
+ Player:
+   type: object
+   properties:
+     name: string
+     lastName: string
+     age: string
+ Team:
+   properties:
+     name: string
+     leader:
+       type: string
+     players: Player[]

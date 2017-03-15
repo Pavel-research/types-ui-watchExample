@@ -1,0 +1,22 @@
+{
+  "name": "types-ui-example",
+  "version": "0.0.6",
+  "private": false,
+  "main": "dist/app.js",
+  "scripts": {
+    "compile": "rm -rf dist/ && ./node_modules/typescript/bin/tsc",
+    "build": "npm run compile",
+    "start": "budo ./dist/main.js  --serve bundle.js --live",
+    "package": "browserify ./dist/demo.js -o bundle.js",
+    "watchRaml":"node ./node_modules/raml2ts/dist/src/transform.js teams.raml -o teams.ts -w"
+  },
+  "dependencies": {
+    "types-ui": "0.0.8"
+  },
+  "devDependencies": {
+    "raml2ts":"0.0.8"
+  },
+  "directories": [
+    "dist"
+  ]
+}
